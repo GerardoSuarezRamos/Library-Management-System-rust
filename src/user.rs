@@ -1,6 +1,6 @@
 use crate::libro::Libro;
 
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Debug, PartialEq, Eq, Clone)]
 pub struct User {
     pub nombre: String,
     pub mem_act: bool,

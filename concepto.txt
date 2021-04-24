@@ -1,20 +1,16 @@
 perspectiva de usuario:
-1. prestar libros
-2. buscar libros 
-3. devolver libros
-4. tope de libros prestados
-
+1. buscar libros 
+2. tope de libros prestados
 
 perspectiva de libro:
-1. caracteristicas
-2. metadatos
-3. en caso de estar prestado, este reserva dentro de si, si un usuario lo tiene prestado
+1. caracteristicas X
+2. metadatos X
+3. en caso de estar prestado, este reserva dentro de si, si un usuario lo tiene prestado X
 
 
 servicios bibliotecarios:
-1. prestar libros
-2. insertar nuevos libros
-3. eliminar libros en mal estado
+1. prestar libros X
+2. insertar nuevos X
+3. devolucion de libro X
 
-opcional, dado que no veo aplicacion util por el momento:
-4. Multar si excede el tiempo de prestamo
+

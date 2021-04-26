@@ -1,6 +1,6 @@
 perspectiva de usuario:
-1. buscar libros 
-2. tope de libros prestados
+1. buscar libros X 
+2. tope de libros prestados X
 
 perspectiva de libro:
 1. caracteristicas X

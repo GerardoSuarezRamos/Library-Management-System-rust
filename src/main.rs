@@ -1,3 +1,6 @@
+/* es importante resaltar que al trabajar con modulos, siempre se utilizan las rutas relativas
+al crate que estas utilizando como interno */
+
 /* autor: Gerardo Suarez Ramos */
 
 // imports
@@ -49,10 +52,55 @@ fn main() {
                 user::User::buscar_libro(&mut _lista_de_libros, nombre);
             }
             3 => {
-                // TODO:: NECESITO COMPLETAR EL MODULO DE NUEVO LIBRO
-                /*let nuevo: Libro = libro::Libro::new();
-                service_library::servicios_de_libreria::insertar_nuevo_libro();
-                */
+                let nuevo: libro::Libro = libro::Libro::new();
+                service_library::servicios_de_libreria::insertar_nuevo_libro(
+                    nuevo,
+                    &mut _lista_de_libros,
+                );
+            }
+            4 => {
+                // Recibir nombre de usuario para buscarlo en la lista
+                println!("¿Cual es el nombre de usuario?");
+                let mut nombre_de_usuario = String::new();
+                let entrada = io::stdin().read_line(&mut nombre_de_usuario).unwrap();
+
+                for val in _usuarios.iter() {
+                    if val.nombre == nombre_de_usuario {
+                        // Recibir nombre del libro para prestar
+                        println!("¿Cual libro desea prestar?");
+                        let mut nombre_de_libro = String::new();
+                        let entrada2 = io::stdin().read_line(&mut nombre_de_libro).unwrap();
+
+                        // Realizar procedimiento de prestamo
+                        service_library::servicios_de_libreria::_prestar_libro(
+                            val.clone(),
+                            &mut _lista_de_libros,
+                            nombre_de_libro,
+                        )
+                    }
+                }
+            }
+            5 => {
+                // Recibir nombre de usuario para buscarlo en la lista
+                println!("¿Cual es el nombre de usuario?");
+                let mut nombre_de_usuario = String::new();
+                let entrada = io::stdin().read_line(&mut nombre_de_usuario).unwrap();
+
+                for val in _usuarios.iter() {
+                    if val.nombre == nombre_de_usuario {
+                        // Recibir nombre del libro para prestar
+                        println!("¿Cual libro desea prestar?");
+                        let mut nombre_de_libro = String::new();
+                        let entrada2 = io::stdin().read_line(&mut nombre_de_libro).unwrap();
+
+                        // Realizar procedimiento de prestamo
+                        service_library::servicios_de_libreria::_prestar_libro(
+                            val.clone(),
+                            &mut _lista_de_libros,
+                            nombre_de_libro,
+                        )
+                    }
+                }
             }
             _ => {
                 println!("Eleccion equivocada")

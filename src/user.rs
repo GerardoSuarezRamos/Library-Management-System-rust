@@ -30,4 +30,10 @@ impl User {
             }
         }
     }
+    pub fn incrementar_libro(&mut self) {
+        self.top_de_libro += 1;
+    }
+    pub fn decrementar_libro(&mut self) {
+        self.top_de_libro -= 1;
+    }
 }

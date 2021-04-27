@@ -14,18 +14,22 @@ pub struct Libro {
 impl Libro {
     pub fn new() -> Libro {
         // entrada del nombre
+        println!("Ingrese el nombre del libro");
         let mut nuevo_nombre = String::new();
         let entrada = io::stdin().read_line(&mut nuevo_nombre).unwrap();
 
         // entrada de isbn del libro
+        println!("Ingrese el ISBN del libro");
         let mut nuevo_isbn = String::new();
         let entrada2 = io::stdin().read_line(&mut nuevo_isbn).unwrap();
 
         // entrada de cateogira del libro
+        println!("Ingrese la categoria del libro");
         let mut nueva_categoria = String::new();
         let entrada2 = io::stdin().read_line(&mut nueva_categoria).unwrap();
 
         // entrada del año de publicacion
+        println!("Ingrese el año de publicacion del libro");
         let mut nuevo_anio = String::new();
         let entrada2 = io::stdin().read_line(&mut nuevo_anio).unwrap();
         let anio_publicado: u32 = nuevo_anio.trim().parse().unwrap();

@@ -25,8 +25,10 @@ impl User {
     }
     pub fn buscar_libro(lista: &mut Vec<Libro>, nombre_libro: String) {
         for val in lista.iter() {
-            if val.nombre == nombre_libro {
-                println!("{:?}", val);
+            if val.nombre.lines().next().unwrap() == nombre_libro.lines().next().unwrap() {
+                println!("El nombre del libro es: {}\nEl isbn es: {}\nLa categoria es: {}\nEl ano de publicacion es: {}", val.nombre.lines().next().unwrap(), val.isbn.lines().next().unwrap(), val.categoria.lines().next().unwrap(), val.ano_publ);
+            } else {
+                println!("No se ha encontrado ningun libro con ese nombre");
             }
         }
     }
